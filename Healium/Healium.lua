@@ -1125,11 +1125,8 @@ function Healium_OnEvent(frame, event, ...)
 	if event == "UNIT_AURA" then
 		if Healium_Units[arg1] then
 			for _,v  in pairs(Healium_Units[arg1]) do
-				if Healium.ShowBuffs then 
-					local buffIndex = Healium_getBuffIndex(arg1, v)
-					if buffindex then
-						Healium_UpdateUnitBuffs(arg1, buffIndex)
-					end
+				if Healium.ShowBuffs then
+					Healium_UpdateUnitBuffs(arg1, v)
 				end
 				Healium_UpdateSpecialBuffs(arg1)
 			end

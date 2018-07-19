@@ -911,8 +911,8 @@ function Healium_UpdateUnitBuffs(unit, frame)
 
 	if Healium.ShowBuffs then
 		for i=1, 100, 1 do
-			local name, rank, icon, count, debuffType, duration, expirationTime, source, isStealable = UnitBuff(unit, i)
-			if name  then 
+			local name, icon, count, debuffType, duration, expirationTime, source, isStealable = UnitBuff(unit, i)
+			if name then 
 				if (source == "player") then
 					
 					local armed = false
@@ -971,7 +971,7 @@ function Healium_UpdateUnitBuffs(unit, frame)
 		local debuffTypes = { } 
 		
 		for i = 1, 40, 1 do
-			local name, rank, icon, count, debuffType, duration, expirationTime, unitCaster, isStealable, shouldConsolidate, spellId = UnitDebuff(unit, i)
+			local name, icon, count, debuffType, duration, expirationTime, unitCaster, isStealable, shouldConsolidate, spellId = UnitDebuff(unit, i)
 			
 			if name == nil then
 				break
