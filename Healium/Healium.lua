@@ -1205,6 +1205,9 @@ function Healium_OnEvent(frame, event, ...)
 		Healium_DebugPrint("PLAYER_ENTERING_WORLD")
 		-- Populate the Healium_Spell Table with ID and Icon data.
 		Healium_UpdateSpells()
+		
+		Healium_ToggleAllFrames()
+		Healium_ToggleAllFrames()
 	end
 	
 		-- Do not use this event for anything meaningful (see comment above ADDON_LOADED for reason)
@@ -1267,7 +1270,6 @@ function Healium_OnEvent(frame, event, ...)
 	-- VARIABLES_LOADED's order can no longer be relied upon. (it kind of seems random to me)
 	if ((event == "ADDON_LOADED") and (string.lower(arg1) == string.lower(Healium_AddonName))) then
 		Healium_DebugPrint("ADDON_LOADED")  	
-
 		InitVariables()
 		Healium_InitSpells(HealiumClass, HealiumRace) 		
 		Healium_InitDebuffSound()		
@@ -1310,7 +1312,7 @@ end
 
 function Healium_getBuffIndex(unitName, spellName)
 	for i = 1, 40 do
-		buffName, _, _, _, _, _, _, _, _ , spellId, _, _, _, _ = UnitBuff(unitName, i)
+		buffName, _, _, _, _, _, _, _, _ , spellId = UnitBuff(unitName, i)
 		if buffName == spellName then
 			return i
 		end

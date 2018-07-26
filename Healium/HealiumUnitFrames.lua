@@ -490,10 +490,18 @@ end
 
 
 function HealiumUnitFrames_Button_OnShow(frame)
+	if frame:GetName() == "HealiumPartyFrame_HeaderUnitButton1" then
+		--print(debugstack())
+	end
+	--print("showing "..frame:GetName())
 	table.insert(Healium_ShownFrames, frame)
 end	
 
 function HealiumUnitFrames_Button_OnHide(frame)
+	if frame:GetName() == "HealiumPartyFrame_HeaderUnitButton1" then
+		--print(debugstack())
+	end
+	--print("hiding "..frame:GetName())
 	Healium_ShownFrames[frame] = nil
 	
 	local parent = frame:GetParent()
@@ -610,7 +618,7 @@ function Healium_ToggleAllFrames()
 		Healium_Warn("Can't toggle frames while in combat.")
 		return
 	end
-	
+		
 	local hide = false
 
 	if PartyFrame:IsShown() then hide = true end
@@ -832,8 +840,8 @@ function Healium_Show40ManRaidFrames()
 end
 
 function Healium_CreateUnitFrames()
+	
 	PartyFrame = CreatePartyUnitFrame("HealiumPartyFrame", "Party")
-
 	if Healium.ShowPartyFrame then
 		PartyFrame:Show()
 	end
