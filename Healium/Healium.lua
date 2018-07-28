@@ -1114,7 +1114,7 @@ function Healium_OnEvent(frame, event, ...)
 	end
 
     if event == "UNIT_POWER_UPDATE" then
-		if (arg2 == 0) and Healium_Units[arg1] then
+		if (arg2 == "MANA") and Healium_Units[arg1] then
 			for _,v  in pairs(Healium_Units[arg1]) do
 				Healium_UpdateUnitMana(arg1, v)
 			end

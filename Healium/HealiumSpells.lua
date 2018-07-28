@@ -46,7 +46,6 @@ function Healium_InitSpells(class, race)
 		AddSpell(774)		-- Rejuvenation
 		AddSpell(8936)		-- Regrowth
 		AddSpell(33763)		-- Lifebloom
-		AddSpell(5185)		-- Healing Touch
 		AddSpell(18562)		-- Swiftmend
 		AddSpell(48438)		-- Wild Growth
 		AddSpell(88423)		-- Nature's Cure
@@ -174,16 +173,24 @@ function Healium_InitSpells(class, race)
 		AddSpell(124682) 	-- Enveloping Mist
 --		AddSpell(115310)	-- Revival (has cures, but is AOE)
 		AddSpell(116670)	-- Vivify
-		AddSpell(115450)	-- Detox 		
+		AddSpell(115450)	-- Detox (MW)
+		AddSpell(218164)	-- Detox (BrM/WW)
 		AddSpell(115178)	-- Resuscitate (rez)
 		AddSpell(124081)	-- zen pulse
 		AddSpell(197945)	-- mistwalk
 		
-		-- Monk Detox
+		-- Monk Detox MW
 		Cures[SpellName(115450)] = {
 			CanCurePoison = true, 
 			CanCureDisease = true,
-			CanCureMagicFunc = function() return (GetSpecialization() == 2) end	-- if monk is mistweaver then Detox cures magic
+			CanCureMagic = true,
+			--CanCureMagicFunc = function() return (GetSpecialization() == 2) end	-- if monk is mistweaver then Detox cures magic
+		}
+		
+		-- Monk Detox BrM/WW
+		Cures[SpellName(218164)] = {
+			CanCurePoison = true, 
+			CanCureDisease = true,
 		}
 	end
 
