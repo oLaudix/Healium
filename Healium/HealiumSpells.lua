@@ -179,19 +179,21 @@ function Healium_InitSpells(class, race)
 		AddSpell(124081)	-- zen pulse
 		AddSpell(197945)	-- mistwalk
 		
-		-- Monk Detox MW
-		Cures[SpellName(115450)] = {
-			CanCurePoison = true, 
-			CanCureDisease = true,
-			CanCureMagic = true,
-			--CanCureMagicFunc = function() return (GetSpecialization() == 2) end	-- if monk is mistweaver then Detox cures magic
-		}
-		
 		-- Monk Detox BrM/WW
 		Cures[SpellName(218164)] = {
 			CanCurePoison = true, 
 			CanCureDisease = true,
 		}
+		
+		-- Monk Detox MW
+		Cures[SpellName(115450)] = {
+			CanCurePoison = true, 
+			CanCureDisease = true,
+			CanCureMagic = true,
+			CanCureMagicFunc = function() return (GetSpecialization() == 2) end	-- if monk is mistweaver then Detox cures magic
+		}
+		
+		
 	end
 
 	if (class == "DEATHKNIGHT") then
