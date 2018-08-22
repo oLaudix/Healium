@@ -1,3 +1,9 @@
+8.0
+* Initial Healium Continued release
+
+---
+Original Healium changelog below
+---
 2.5.9
 * Fix bugs with PlaySound caused by Blizzard api changes in this patch.
 
