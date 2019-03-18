@@ -14,4 +14,6 @@ I'm sorry that I'm not able to publish this to Twitch/Curse at the moment. I'm t
 
 Because the addon author published Healium as 'all rights reserved,' Twitch/Curse will not host my version as a 'Healium Continued' or similar style continuation. I tried and they explicitly told me this, so unfortunately this repository will be the only source for these changes for the time being.
 
-Please do file and bug reports or feature requests, and I'll take a look at them!
+Please do file and bug reports or feature requests, and I'll take a look at them! When you do, please be as specific as possible and include screenshots if you're able. I don't actively use Healium myself, so I'm not as familiar with some of its intricacies or functionality as you guys who use it day to day. I'm happy to try to make fixes or improvements, but any help you can lend me is greatly appreciated.
+
+One other note: while I'll do my best to keep this addon updated through further Blizzard API changes, I do have a job, family, and raid that come first for me, so please accept my apologies if your bug report or improvement request goes unseen for a bit. I'll do my best to get to it as soon as I'm able. Thanks!
