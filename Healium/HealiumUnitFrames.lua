@@ -39,18 +39,18 @@ local Tranquility = GetSpellInfo(157982) -- Tranquility now has a HoT component 
 local Glimmer = GetSpellInfo(287280) -- Glimmer of Light, Holy Paladin Azerite trait
 
 Healium_Sounds = {
-	{ ["Alliance Bell"] = "Sound\\Doodad\\BellTollAlliance.ogg" },
-	{ ["Bellow"] = "Sound\\Doodad\\BellowIn.ogg" },
-	{ ["Dwarf Horn"] = "Sound\\Doodad\\DwarfHorn.ogg" },
-	{ ["Gruntling Horn A"] = "Sound\\Events\\gruntling_horn_aa.ogg" },
-	{ ["Gruntling Horn B"] = "Sound\\Events\\gruntling_horn_bb.ogg" },
-	{ ["Horde Bell"] = "Sound\\Doodad\\BellTollHorde.ogg" },
-	{ ["Man Scream"] = "Sound\\Events\\EbonHold_ManScream1_02.ogg" },
-	{ ["Night Elf Bell"] = "Sound\\Doodad\\BellTollNightElf.ogg" },
-	{ ["Space Death"] = "Sound\\Effects\\DeathImpacts\\SpaceDeathUni.ogg" },
-	{ ["Tribal Bell"] = "Sound\\Doodad\\BellTollTribal.ogg" },
-	{ ["Wisp"] = "Sound\\Event Sounds\\Wisp\\WispPissed2.ogg" },
-	{ ["Woman Scream"] = "Sound\\Events\\EbonHold_WomanScream1_02.ogg" },
+	{ ["Alliance Bell"] = 566564 },
+	{ ["Bellow"] = 566234 },
+	{ ["Dwarf Horn"] = 566064 },
+	{ ["Gruntling Horn A"] = 598076 },
+	{ ["Gruntling Horn B"] = 598196 },
+	{ ["Horde Bell"] = 565853 },
+	{ ["Man Scream"] = 598052 },
+	{ ["Night Elf Bell"] = 566558 },
+	{ ["Space Death"] = 567198 },
+	{ ["Tribal Bell"] = 566027 },
+	{ ["Wisp"] = 567294 },
+	{ ["Woman Scream"] = 598223 },
 }
 
 function Healium_GetSoundPath(sound)
